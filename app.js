@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 0.0.0.0;
 require("dotenv").config();
 
 const express = require("express");
@@ -17,10 +17,7 @@ const songRoutes = require("./routes/song");
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://antara-web.netlify.app",
-      "https://master--soundrex.netlify.app",
+      "https://paxsenix0.onrender.com"
     ],
     credentials: true,
   })
